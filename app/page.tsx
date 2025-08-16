@@ -4,6 +4,7 @@ import { createMDXSource } from "fumadocs-mdx"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useMemo } from "react"
 import { formatDate } from "@/lib/utils"
+import Image from "next/image"
 
 const source = loader({
   baseUrl: "/docs",
@@ -39,7 +40,18 @@ export default function HomePage() {
       <div className="border-b border-border/50">
         <div className="max-w-5xl mx-auto relative">
           <div className="p-3 flex items-center justify-between">
-            <h1 className="text-3xl font-semibold tracking-tight">Changelog</h1>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/bmslogo.webp"
+                alt="BMS Logo"
+                width={48}
+                height={48}
+                className="h-12 w-auto"
+              />
+              <h1 className="text-3xl font-semibold tracking-tight">
+                Changelog
+              </h1>
+            </div>
             <ThemeToggle />
           </div>
         </div>
